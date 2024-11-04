@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>contoh</h2> 
+   <p id="hasil"></p>
+
+   <script>
+    let nama = "yuni";
+    console.log("Nama: " + nama);
+
+    let sudahminum = true;
+    console.log("Sudah minum: " + sudahminum);
+
+    let alamat = (" gaji, guntur, Demak");
+    console.log("Alamat: " + alamat);
+
+    let identitas = {
+        nama : "yuni",
+        tanggallahir: "14 April 2009",
+        sekolah: "smk bina nusantara",
+    };
+    console.log("Identitas: " + identitas);
+    document.getElementById("hasil").innerHTML =
+    "<b> tipe data: <b><br>" +
+        "Nama: " + nama + "<br>" +
+        "Sudah Minum: " + sudahminum + "<br>" +
+        "Alamat: " + alamat + "<br>" +
+        "Identitas: Nama: " + identitas.nama + ", Tanggal Lahir: " + identitas.tanggallahir + ", Sekolah: " + identitas.sekolah;
+       
+
+   </script>
+</body>
+</html>

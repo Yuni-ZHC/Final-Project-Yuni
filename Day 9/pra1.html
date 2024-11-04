@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Lampu</title>
+    <style>
+        body {
+            margin: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px ;
+        }
+
+        .lampu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 50px; /* Ganti jarak antar lampu menjadi lebih kecil */
+            padding: 200px; /* Padding pada container */
+        }
+
+        .lampu {
+            text-align: center;
+            padding: 20px; /* Padding yang lebih kecil */
+            border-radius: 10px;
+            width: 200%; /* Menggunakan lebar 100% */
+            max-width: 200px; /* Maksimal lebar 200px */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+            transition: transform 0.2s; /* Transisi saat hover */
+        }
+
+        .lampu:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+
+        .bg-1, .bg-2, .bg-3, .bg-4 {
+            background-size: 100% 100% 100%; /* Mengubah cara gambar ditampilkan */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px; /* Mengatur tinggi tetap untuk setiap lampu */
+        }
+
+        .bg-1 {
+            background-image: url(../image/ruangceo.jpg);
+        }
+        .bg-2 {
+            background-image: url(../image/kamartidur.jpeg);
+        }
+        .bg-3 {
+            background-image: url(../image/ruangmakan.jpg);
+        }
+        .bg-4 {
+            background-image: url(../image/ruangtamu.jpeg);
+        }
+
+        img {
+            width: 100px; /* Mengatur ukuran gambar */
+            height: 150px; /* Otomatis menjaga rasio gambar */
+        }
+
+        @media (max-width: 600px) {
+            .lampu {
+                padding: 50px; /* Mengurangi padding untuk layar kecil */
+                max-width: 90%; /* Memperlebar lebar maksimal di layar kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kontrol Lampu</h1>
+    <div class="lampu-container">
+        <!-- Lampu 1 -->
+        <div class="lampu bg-1">
+            <img id="lampuImage1" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus1">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage1', 'lampuStatus1', 'lampuTimer1')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer1"></p> 
+        </div>
+        <!-- Lampu 2 -->
+        <div class="lampu bg-2">
+            <img id="lampuImage2" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus2">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage2', 'lampuStatus2', 'lampuTimer2')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer2"></p> 
+        </div>
+        <!-- Lampu 3 -->
+        <div class="lampu bg-3">
+            <img id="lampuImage3" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus3">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage3', 'lampuStatus3', 'lampuTimer3')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer3"></p> 
+        </div>
+        <!-- Lampu 4 -->
+        <div class="lampu bg-4">
+            <img id="lampuImage4" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus4">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage4', 'lampuStatus4', 'lampuTimer4')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer4"></p> 
+        </div>
+    </div>
+
+    <script> 
+        function trueOnLampu(imageId, statusId, timerId) { 
+            document.getElementById(imageId).src = "../image/lampuhidup.jpg"; 
+            document.getElementById(statusId).innerText = "Lampu Menyala"; 
+
+            let countdown = 3; // Mengatur timer menjadi 3 detik 
+            document.getElementById(timerId).innerText = "Waktu: " + countdown + " Detik"; 
+
+            let timerInterval = setInterval(function () { 
+                countdown--; 
+                if (countdown > 0) { 
+                    document.getElementById(timerId).innerText = "Waktu: " + countdown + " Detik"; 
+                } else { 
+                    clearInterval(timerInterval); 
+                    document.getElementById(timerId).innerText = ""; 
+                    document.getElementById(imageId).src = "../image/lampumati.jpg"; 
+                    document.getElementById(statusId).innerText = "Lampu Mati"; 
+                } 
+            }, 1000); 
+        } 
+    </script> 
+</body> 
+</html>

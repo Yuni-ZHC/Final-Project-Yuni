@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pilih Nama Bulan Berdasarkan Nomor</h1>
+    <label for="bulan">Maukkan Nomor Bulan</label>
+    <input type="bulan" id="bulan" placeholder="masukkan nomor bulan">
+    <button onclick="cekBulan ()">cek bulan</button>
+    <p id="hasilbulan"></p>
+    
+    <script>
+        function cekBulan() {
+            var nomorBulan = parseInt(document.getElementById ("bulan").value)
+            var hasil = "";
+
+            switch (nomorBulan) {
+                case 1: 
+                hasil = "Bulan Januari";
+                break;
+                case 2: 
+                hasil = "Bulan Februari";
+                break;
+                case 3: 
+                hasil = "Bulan Maret";
+                break;
+                case 4: 
+                hasil = "Bulan April";
+                break;
+                case 5: 
+                hasil = "Bulan Mei";
+                break;
+                case 6: 
+                hasil = "Bulan Juni";
+                break;
+                case 7: 
+                hasil = "Bulan Juli";
+                break;
+                case 8: 
+                hasil = "Bulan Agustus";
+                break;
+                case 9: 
+                hasil = "Bulan September";
+                break;
+                case 10: 
+                hasil = "Bulan Oktober";
+                break;
+                case 11: 
+                hasil = "Bulan November";
+                break;
+                case 12: 
+                hasil = "Bulan Desember";
+                break;
+                default:
+                    hasil = "Nomor bulan tidak valid. Masukkan angka antara 1 dan 12"
+            }
+            document.getElementById("hasilbulan").innerHTML = hasil;
+
+        }
+    </script>
+</body>
+</html>

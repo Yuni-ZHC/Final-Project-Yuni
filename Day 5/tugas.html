@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas kondisi</title>
+</head>
+<body>
+    <h2>Pengelompokkan Umur</h2>
+
+    <label for="umur">Masukkan Umur</label>
+    <input type="number" id="umur" placeholder="Masukkan Umur">
+    <button onclick="cekUmur()">Cek Umur</button>
+
+    <p id="hasil"></p>
+
+<script>
+    function cekUmur() {
+
+        var umur = document.getElementById("umur").value;
+        var hasil = "";
+
+
+        if (umur >= 50) {
+            hasil = "maka kamu termasuk TUA.";
+        } else if (umur >= 20) {
+            hasil = "maka kamu termasuk DEWASA.";
+        } else if (umur >= 15) {
+            hasil = "maka kamu termasuk REMAJA.";
+        } else if (umur >= 5) {
+            hasil = "maka kamu termasuk BOCIL.";
+        } else if (umur >= 1-4) {
+            hasil = "maka kamu termasuk BAYI.";
+        } else {
+            hasil = "maka kamu termasuk REMAJA.";
+        }
+
+        document.getElementById("hasil").innerHTML = hasil;
+    } 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Lampu</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .lampu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 100px;
+            margin: 50px;
+            transition: transform 0.2s;
+        }
+        .lampu {
+            text-align: center;
+            padding: 100px;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .bg-1 {
+            background-image: url(../image/ruangceo.jpg);
+            background-size: 100% 100% 100% ;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-2 {
+            background-image: url(../image/kamartidur.jpeg);
+            background-size: 100% 100 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-3 {
+            background-image: url(../image/ruangmakan.jpg);
+            background-size: 100% 100% 100% ;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .bg-4 {
+            background-image: url(../image/ruangtamu.jpeg);
+            background-size: 100% 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        img {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kontrol Lampu</h1>
+    <div style="text-align: center"> 
+        <button class="btn"><a href="./table.html"> HOME</a></button> 
+        <button class="btn"><a href="./layout.html"> LAYOUT</a></button> 
+        <div class="lampu-container">
+    <div class="lampu-container">
+        <!-- Lampu 1 -->
+        <div class="lampu bg-1">
+            <img id="lampuImage1" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus1">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage1', 'lampuStatus1', 'lampuTimer1')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer1"></p> 
+        </div>
+        <!-- Lampu 2 -->
+        <div class="lampu bg-2">
+            <img id="lampuImage2" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus2">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage2', 'lampuStatus2', 'lampuTimer2')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer2"></p> 
+        </div>
+        <!-- Lampu 3 -->
+        <div class="lampu bg-3">
+            <img id="lampuImage3" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus3">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage3', 'lampuStatus3', 'lampuTimer3')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer3"></p> 
+        </div>
+        <!-- Lampu 4 -->
+        <div class="lampu bg-4">
+            <img id="lampuImage4" src="../image/lampumati.jpg" alt="Lampu"> 
+            <p id="lampuStatus4">Lampu Mati</p> 
+            <button onclick="trueOnLampu('lampuImage4', 'lampuStatus4', 'lampuTimer4')"> 
+                Nyalakan Lampu 
+            </button> 
+            <p id="lampuTimer4"></p> 
+        </div>
+    </div>
+
+    <script> 
+        function trueOnLampu(imageId, statusId, timerId) { 
+            document.getElementById(imageId).src = "../image/lampuhidup.jpg"; 
+            document.getElementById(statusId).innerText = "Lampu Menyala"; 
+
+            let countdown = 3; // Mengatur timer menjadi 3 detik 
+            document.getElementById(timerId).innerText = "Waktu: " + countdown + " Detik"; 
+
+            let timerInterval = setInterval(function () { 
+                countdown--; 
+                if (countdown > 0) { 
+                    document.getElementById(timerId).innerText = "Waktu: " + countdown + " Detik"; 
+                } else { 
+                    clearInterval(timerInterval); 
+                    document.getElementById(timerId).innerText = ""; 
+                    document.getElementById(imageId).src = "../image/lampumati.jpg"; 
+                    document.getElementById(statusId).innerText = "Lampu Mati"; 
+                } 
+            }, 1000); 
+        } 
+    </script> 
+</body> 
+</html>

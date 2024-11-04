@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>e
+    <p id="hasil chenle"></p>
+    <p id="hasil lin yi"></p>
+    <p id="hasil yuan"></p>
+    <p id="hasil kai"></p>
+    <script>
+        // fungsi untuk menjumlahkan dua angka
+        function tambah(a, b) {
+            return a + b;
+        }
+        let hasiltamabah = tambah(10, 12);
+        console.log(hasiltamabah);
+
+        function kali(a, b) {
+            return a * b;
+        }
+        let hasilkali = kali(10, 12);
+        console.log(hasilkali);
+
+        function bagi(a, b) {
+            return a / b;
+        }
+        let hasilbagi = bagi(10, 12)
+        console.log(hasilbagi);
+
+        function kurangi(a, b) {
+            return a - b;
+        }
+        let hasilkurangi = kurangi(10, 12);
+        console.log(hasilkurangi);
+       
+        // menampilkan hasil didalam elemen <P> dengan id "haasil"
+            document.getElementById("hasil chenle").innerHTML = "hasil chenle: " + hasiltamabah;
+            document.getElementById("hasil lin yi").innerHTML = "hasil lin yi: " + hasilkali;
+            document.getElementById("hasil yuan").innerHTML = "hasil yuan: " + hasilbagi;
+            document.getElementById("hasil kai").innerHTML = "hasil kai: " + hasilkurangi;
+    </script>
+</body>
+</html>

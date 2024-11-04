@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar Tipe Data Dasar Javascript</h1>
+    <p id="hasil"></p>
+
+    <script>
+        //Tipe Data String (Teks)
+        let namalengkap = "Eka Yuni Rahmawati";
+        console.log("Nama:" + namalengkap);
+
+//Tipe Data Number (Angka)
+        let usia = 15;
+        console.log("Usia:" + usia);// fungsi reght adalah agar bisa menambahkan banyak data misalnya hobi
+
+//Tipe Data Boolean (True/False)
+        let sudahmakan = false;
+        console.log("Sudah Makan:" + sudahmakan);
+
+//Tipe Data Array (Daftar)
+        let hobi =["Nonton Dracin, Membaca Novel Dan Komik, Memasak, Musikan, Menghalu"];
+        console.log("Hobi:" + hobi);
+
+//Tipe Data Object (Objek)
+        let identitas= {
+            nama: "Yuni",
+            tanggallahir: "14 April 2009",
+            alamat: "Gaji, Guntur, Demak",
+            status: "Istrinya Zhong Chenle"
+            
+        };
+        console.log("Identitas:" + identitas);
+        document.getElementById("hasil").innerHTML =
+        "<b>Tipe Data:</b><br>" +
+            "Nama Lengkap (String): " + namalengkap + "<br>" +
+            "Usia (Number): " + usia + "<br>" +
+            "Sudah Makan (Boolean): " + sudahmakan + "<br>" +
+            "Hobi (Array): " + hobi + "<br>" +
+            "Identitas (Objek): Nama: " + identitas.nama + ", Tanggal Lahir: " + identitas.tanggallahir + ", Alamat: " + identitas.alamat + ", Status: " + identitas.status;
+    </script>
+</body>
+</html>

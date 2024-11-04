@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Hello. world</div>
+    <img id="myImage"src="../image/chz.jpg" alt="Gambar awal"> 
+    <div id="myDiv" style="width: 200px; height: 200px; background-color: rgb(151, 118, 218);">
+         Saya Seorang Aktor Dari China, Saya Sudah Memainkan Banyak Film Salah Satunya Adalah "Hidden Love"
+       </div>
+
+       <script>
+        let myDiv = document.getElementById('myDiv');
+        myDiv.textContent = 'Hallo, Perkenalkan Nama Saya Chen Zhe Yuan!';
+        document.getElementById("myImage").setAttribute("src","../image/zzz.jpg"); width="200" 
+        document.getElementById("myImage").setAttribute("alt","../image/zzz.jpg"); height="200"
+
+        let div = document.getElementById("myDiv");
+        div.style.backgroundColor = "lightgreen";
+        div.style.width = "200px";
+        div.style.height = "200px";
+
+       </script>
+        <form action="./tabel.html">
+            <label for="name">Nama Depan</label><br>
+            <input type="text" id="name" placeholder="nama depan..."><br><br>
+            <label for="name">Nama Belakang</label><br>
+            <input type="text" id="name" placeholder="nama belakang..."><br><br>
+            <input type="submit" value="kirim">
+        </form>
+</body>
+</html>

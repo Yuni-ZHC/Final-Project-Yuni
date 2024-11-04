@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Uji Coba Tipe Data</h1>
+
+    <p id="Aritmatika"></p>
+    <p id="Perbandingan"></p>
+    <script>
+        var a = 200;
+        var b = 2;
+        var hasilAritmatika = "Hasil Penjumlahan: " + (a + b) + "<br>" +
+                              "Hasil Pengurangan: " + (a - b) + "<br>" +
+                              "Hasil Perkalian: " + (a * b) + "<br>" +
+                              "Hasil Pembagian: " + (a / b) + "<br>" +
+                              "Hasil Sisa Bagi: " + (a % b) + "<br>";
+        document.getElementById("Aritmatika").innerHTML = hasilAritmatika
+
+         var hasilPerbandingan = "Apakah a lebih besar dari b: " + (a > b) + "<br>" +
+                                 "Apakah a sama dengan b: " + (a == b) + "<br>" +
+                                 "Apakah a lebih kecil dari b: " + (a < b) + "<br>" +
+                                 "Apakah b tidak sama dengan b: " + (a != b) + "<br>";
+         document.getElementById("Perbandingan").innerHTML = hasilPerbandingan
+    </script>
+</body>
+</html>

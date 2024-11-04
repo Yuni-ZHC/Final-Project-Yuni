@@ -1,0 +1,14 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(141, 84, 187); */ internal
+}
+form {
+    border: 1px solid #6b1e97;
+   padding: 20px;
+   border-radius: 10px;
+   background-color: #fdf8f8;
+}
